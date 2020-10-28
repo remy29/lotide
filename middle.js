@@ -26,24 +26,22 @@ const assertArraysEqual = function(array1, array2) {
   }
 };
 
-const without = function (array, removed) {
-  const cloner = function (array) {
-    let clone = [];
-    for (const data of array) {
-      clone.push(data);
-    }
-    return clone;
-  };
-  
-  let clone = cloner(array);
-  for (let i = clone.length - 1; i >= 0; i--) {
-    for (let z = 0; z < removed.length; z++) {
-      if (array[i] === removed[z]) {
-        clone.splice(i, 1);
-      }
-    }
+const middle = function(array) {
+  const newArr = [];
+  if (array.length <= 2) {
+    return [];
+  } else if (array.length % 2 === 0) {
+    let i = array.length / 2;
+    let z = (array.length / 2) - 1;
+    newArr.push(array[z], array[i]);
+  } else {
+    let y = Math.floor(array.length / 2);
+    newArr.push(array[y]);
   }
-  return clone;
+  return newArr;
 };
 
-
+assertArraysEqual(middle([1]), []);
+assertArraysEqual(middle([1, 2, 3]), [2]);
+assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]);
+ 
