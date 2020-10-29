@@ -26,16 +26,8 @@ const assertArraysEqual = function(array1, array2) {
   }
 };
 
-const without = function (array, removed) {
-  const cloner = function (array) {
-    let clone = [];
-    for (const data of array) {
-      clone.push(data);
-    }
-    return clone;
-  };
-  
-  let clone = cloner(array);
+const without = function(array, removed) {
+  let clone = [...array];
   for (let i = clone.length - 1; i >= 0; i--) {
     for (let z = 0; z < removed.length; z++) {
       if (array[i] === removed[z]) {
@@ -46,4 +38,7 @@ const without = function (array, removed) {
   return clone;
 };
 
-
+const words = ["hello", "world", "lighthouse"];
+console.log(without(words, ["lighthouse"])); // no need to capture return value for this test case
+// Make sure the original array was not altered by the without function
+assertArraysEqual(words, ["hello", "world", "lighthouse"]);
