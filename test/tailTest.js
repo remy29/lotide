@@ -7,7 +7,7 @@ describe("#head", () => {
   });
 
   it("returns ['c'] for ['a', 'b', 'c']", () => {
-    assert.deepEqual(tail(['a', 'b', 'c']), ['b', 'c']); 
+    assert.deepEqual(tail(['a', 'b', 'c']), ['b', 'c']);
   });
 
 });

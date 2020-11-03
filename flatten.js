@@ -1,5 +1,5 @@
-const flatten = function (array) {
-  newArr = [];
+const flatten = function(array) {
+  const newArr = [];
   for (const data of array) {
     if (!Array.isArray(data)) {
       newArr.push(data);
