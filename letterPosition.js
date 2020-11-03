@@ -1,30 +1,6 @@
-const eqArrays = function(array1, array2) {
-  const pusher = function(array) {
-    let string = "";
-    for (let data of array) {
-      string += data.toString();
-    }
-    return string;
-  };
-  
-  let val1 = pusher(array1);
-  let val2 = pusher(array2);
 
-  if (val1 === val2) {
-    return true;
-  } else {
-    return false;
-  }
-};
 
-const assertArraysEqual = function(array1, array2) {
-  const result = eqArrays(array1, array2);
-  if (result) {
-    console.log(`✅✅✅ Assertion Passed: ${array1} === ${array2}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${array1} !== ${array2}`);
-  }
-};
+//const assertArraysEqual = require('./assertArraysEqual');
 
 const letterPosition = function(string) {
 
@@ -43,5 +19,8 @@ const letterPosition = function(string) {
 
 };
 
-console.log(letterPosition('this is a string'));
-assertArraysEqual(letterPosition("hello")['e'], [1]);
+module.exports = letterPosition;
+
+//TEST CODE
+/* console.log(letterPosition('this is a string'));
+assertArraysEqual(letterPosition("hello")['e'], [1]); */
