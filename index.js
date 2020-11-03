@@ -17,21 +17,21 @@ const takeUntil = require('./takeUntil');
 const without = require('./without');
 
 module.exports = {
-  head:   head,
-  tail:   tail,
-  middle: middle,
-  assertArraysEqual: assertArraysEqual,
-  assertEqual: assertEqual,
-  assertObjectEqual: assertObjectEqual,
-  countLetters: countLetters,
-  eqArrays: eqArrays,
-  eqObjects: eqObjects,
-  findKey: findKey,
-  flatten: flatten,
-  letterPosition: letterPosition,
-  map: map,
-  countOnly: countOnly,
-  findKeyByValue: findKeyByValue,
-  takeUntil: takeUntil,
-  without: without
+  head,
+  tail,
+  middle,
+  assertArraysEqual,
+  assertEqual,
+  assertObjectEqual,
+  countLetters,
+  eqArrays,
+  eqObjects,
+  findKey,
+  flatten,
+  letterPosition,
+  map,
+  countOnly,
+  findKeyByValue,
+  takeUntil,
+  without
 };
